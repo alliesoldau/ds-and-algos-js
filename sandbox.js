@@ -1,11 +1,18 @@
-function onlyElementsAtEvenIndex(array) {
-    var newArray = Array(Math.ceil(array.length / 2));
-    for (var i = 0; i < array.length; i++) {
-        if (i % 2 === 0) {
-            newArray[i / 2] = array[i];
+// Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+
+function flatten(arr) {
+    let newArr = []
+    for (let val of arr) {
+        if (Array.isArray(val)) {
+            newArr = newArr.concat(flatten(val)) 
+        } else {
+            newArr.push(val)
         }
     }
-    return newArray;
+    return newArr
 }
 
-console.log(onlyElementsAtEvenIndex([1,2,3,4,5,6,7,8,9]))
+
+console.log(flatten([1, 2, 3, [4, 5] ])) // [1, 2, 3, 4, 5]
+console.log(flatten([1, [2, [3, 4], [[5]]]])) // [1, 2, 3, 4, 5]
+console.log(flatten([[1],[2],[3]])) // [1,2,3]
