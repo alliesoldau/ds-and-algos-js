@@ -5,6 +5,8 @@
 // O(N^2) time complexity
 // selection sort is better than bubble sort for saving memory space
 
+// O(1) space complexity
+
 function selectionSort(arr) {
     for (let i = 0; i < arr.length; i++) {
         let lowest = i

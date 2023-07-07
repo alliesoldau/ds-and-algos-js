@@ -2,6 +2,8 @@
 // O(n^2) time complexity
 // O(n) time complexity if we use noSwap and the data is very nearly sorted
 
+// O(1) space complexity
+
 // how to swap values
 // function sway(arr, idx1, idx2) {
 //     let temp = arr[idx1]
