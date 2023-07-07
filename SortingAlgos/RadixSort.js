@@ -7,7 +7,7 @@
 // then we repeat the process by looking at the digit of the number at right - 1
 // the number of times we have the bucket the numbers depends on how many digits our max number has (eg: max of 1485 has 4 digits)
 
-// O(nk) time complexity
+// O(nk) time complexity --> n is length of array, k is number of digits on average for the numbers
 // O(n + k) space complexity
 
 // radix sort helper functions

@@ -1,0 +1,59 @@
+this is a flow chart to help you decide which sorting algorithm is best for your purposes
+
+size comparisons: O(n^2) > O(nlogn) > O(n) > O(logn) > O(1)
+
+        [Does time or space complexity matter more to you?]
+
+                [Time]
+
+                        [Is your data already nearly all sorted?]
+
+                                [No]
+
+                                        ~ Radix Sort ~
+                                                - O(nk) time complexity
+                                                - O(n+k) space complexity
+
+                                        ~ Merge Sort ~
+                                                - O(nlogn) time explexity
+                                                - O(n) space complexity
+
+                                        ~ Quick Sort ~
+                                                - O(nlogn) time complexity IF the array wasn't already nearly sorted
+                                                - O(n^2) time complexity IF the array was already nearly sorted
+                                                - O(logn) space complexity
+
+                                [Yes]
+
+                                        ~~ Insertion Sort ~~
+                                                - O(1) space complexity
+                                                - O(n^2) time complexity if data totally unsorted
+                                                - O(n) time complexity if data is nearly sorted
+                                                -- works great for sorted data where you just have to insert 1 more piece of data
+
+                                        ~~ Bubble Sort ~~
+                                                - O(1) space complexity
+                                                - O(n^2) time complexity if data totally unsorted
+                                                - O(n) time complexity if data is nearly sorted
+
+
+
+
+                [Space]
+
+                        ~~ Insertion Sort ~~
+                                - O(1) space complexity
+                                - O(n^2) time complexity if data totally unsorted
+                                - O(n) time complexity if data is nearly sorted
+                                -- works great for sorted data where you just have to insert 1 more piece of data
+
+                        ~~ Selection Sort ~~
+                                - O(1) space complexity
+                                - O(n^2) time complexity
+                                - uses less memory than bubble sort
+
+                        ~~ Bubble Sort ~~
+                                - O(1) space complexity
+                                - O(n^2) time complexity if data totally unsorted
+                                - O(n) time complexity if data is nearly sorted
+
